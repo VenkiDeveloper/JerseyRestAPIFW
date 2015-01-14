@@ -18,7 +18,7 @@ public class TestRestServiceData {
 		CommonFunctionality.readProperties();
 	}
 
-	@Test(priority = 0, description = "Rest API Get Operation",enabled=false)
+	@Test(priority = 0, description = "Rest API Get Operation",enabled=true)
 	public void testGetRestAPI() throws JSONException {
 		String source = "3";
 		ClientResponse response = RestAPIServices.getTypeRestAPI(source);
@@ -39,7 +39,7 @@ public class TestRestServiceData {
 		 
 	}
 	
-	 @Test(priority = 1, description = "Rest API POST Operation") 
+	 @Test(priority = 1, description = "Rest API POST Operation",enabled=false) 
 	 public void testPostRestAPI() {
 	 String data ="<CUSTOMER  xmlns:xlink='http://www.w3.org/1999/xlink'> <ID>55</ID> <FIRSTNAME>venki</FIRSTNAME><LASTNAME>aaaa</LASTNAME><STREET>20 Upland Pl.</STREET><CITY>HYD</CITY></CUSTOMER>"; 
 	 ClientResponse response = RestAPIServices.postTypeRestAPI(data);
@@ -48,7 +48,7 @@ public class TestRestServiceData {
 	 }
 	 
 
-	 @Test(priority = 2, description = "Rest API PUT Operation") 
+	 @Test(priority = 2, description = "Rest API PUT Operation",enabled=false) 
 	 public void  testPutRestAPI() {
 		 String source = "100";
 	 String data = "<FIRSTNAME>ABCD123</FIRSTNAME>"; 
@@ -57,7 +57,7 @@ public class TestRestServiceData {
 	 
 	 }
 		
-	 @Test(priority = 3, description = "Rest API DELETE Operation") 
+	 @Test(priority = 3, description = "Rest API DELETE Operation",enabled=false) 
 	 public	 void testDeleteRestAPI() {
 	
 	 String source = "55"; 
